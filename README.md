@@ -59,6 +59,8 @@ Outras figuras: [matriz de confusão por tipo](figuras/matriz-confusao-tipo.png)
 - [Cuidados e conferência antes da impressão](docs/verificacao.md)
 - [Como citar o trabalho](docs/como-citar.md)
 
+**Correções preparadas em 19/10/2026:** consulte [o registro das correções metodológicas e o status do upload](docs/correcoes-painel-2026.md). Os PDFs/PPTXs ainda publicados nesta pasta são versões anteriores, enquanto os arquivos corrigidos aguardam substituição.
+
 **Atenção:** os arquivos PDF e PPTX disponibilizados são versões de trabalho e **não devem ser presumidos idênticos ou finais para impressão**. O [checklist](docs/verificacao.md) registra ajustes metodológicos e de apresentação ainda necessários.
 
 ## Repositórios vinculados
