@@ -1,0 +1,12 @@
+# Arquivos temporários e documentos pessoais
+.DS_Store
+Thumbs.db
+~$*
+*.tmp
+*.log
+__pycache__/
+*assinado*.pdf
+*assinado*.pptx
+*certificado*.pdf
+*matricula*.pdf
+*cadastro*.pdf
