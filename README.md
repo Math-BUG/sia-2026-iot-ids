@@ -51,6 +51,8 @@ Outras figuras: [matriz de confusão por tipo](figuras/matriz-confusao-tipo.png)
 
 ### Materiais disponibilizados
 
+**Versão final selecionada em 19/10/2026:** o autor confirmou o PDF com apoio **somente do CNPq** e QR code para este repositório. O arquivo definitivo será disponibilizado em `apresentacao/painel-final-sia-2026.pdf` **após seu envio**. Os links PDF/PPTX a seguir continuam sendo versões antigas de revisão. [Registro da versão final e integridade](docs/versao-final.md).
+
 - **[Painel em PDF — versão de revisão](apresentacao/painel-em-revisao.pdf)**
 - **[PowerPoint editável — versão de revisão](apresentacao/painel-editavel-revisar.pptx)**
 - **[Prévia do painel](apresentacao/visualizacao-painel.png)**
@@ -59,7 +61,7 @@ Outras figuras: [matriz de confusão por tipo](figuras/matriz-confusao-tipo.png)
 - [Cuidados e conferência antes da impressão](docs/verificacao.md)
 - [Como citar o trabalho](docs/como-citar.md)
 
-**Correções preparadas em 19/10/2026:** consulte [o registro das correções metodológicas e o status do upload](docs/correcoes-painel-2026.md). Os PDFs/PPTXs ainda publicados nesta pasta são versões anteriores, enquanto os arquivos corrigidos aguardam substituição.
+**Histórico de correções:** [registro da revisão científica](docs/correcoes-painel-2026.md). O PDF final escolhido já incorpora essas alterações; falta apenas publicá-lo na pasta de apresentação.
 
 **Atenção:** os arquivos PDF e PPTX disponibilizados são versões de trabalho e **não devem ser presumidos idênticos ou finais para impressão**. O [checklist](docs/verificacao.md) registra ajustes metodológicos e de apresentação ainda necessários.
 

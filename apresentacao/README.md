@@ -1,27 +1,25 @@
-# Apresentação em painel — SIA UFV 2026
+# Painel SIA UFV 2026 — trabalho 24615
 
-**Trabalho nº 24615:** *Arquitetura híbrida para detecção de tráfego malicioso em ambientes IoT*.
+**Título aprovado:** Arquitetura híbrida para detecção de tráfego malicioso em ambientes IoT.
 
-Apresentação **programada** para **21/10/2026, de 10h30 a 12h**, no **Espaço Multiuso**, painel **187**. Dimensões: **90 × 120 cm**, orientação vertical, conforme o [modelo oficial do SIA](https://sia.ufv.br/apresentacao-painel/).
+**Sessão programada:** 21/10/2026, 10h30–12h · Espaço Multiuso · Painel 187. Formato: vertical, 90 × 120 cm.
 
-## Arquivos já disponíveis
+## Versão definitiva escolhida
 
-| Arquivo | Descrição | Estado |
-| --- | --- | --- |
-| [`painel-em-revisao.pdf`](painel-em-revisao.pdf) | Painel em PDF para conferência visual | **Rascunho para revisão** |
-| [`painel-editavel-revisar.pptx`](painel-editavel-revisar.pptx) | Versão PowerPoint editável | **Rascunho para revisão** |
-| [`visualizacao-painel.png`](visualizacao-painel.png) | Imagem de prévia | **Prévia** |
+Em 19/10/2026, o autor confirmou como **versão final** o arquivo `Painel_SIA_2026_Trabalho_24615_QR_CNPQ_v3 (1).pdf`, destinado ao GitHub como:
 
-Os três arquivos foram enviados ao repositório. **Não são identificados como versão final apresentada.** O PDF e o PowerPoint devem ser comparados antes da impressão: não foi confirmada equivalência entre os conteúdos das duas versões.
+`apresentacao/painel-final-sia-2026.pdf`
 
-## Revisões ainda recomendadas
+Esta versão contém **apenas CNPq** como apoio financeiro e um **QR code** apontando para este repositório. O PDF tem uma página e dimensões de aproximadamente 89,99 × 119,98 cm. O QR code foi decodificado e validado.
 
-- No painel, substituir *“partições independentes por IPs, serviço e protocolo”* por uma descrição fiel do critério de **chave composta** `src_ip|dst_ip|service|proto`. O protocolo evita repetição dessa combinação, não necessariamente de cada IP isolado.
-- Indicar explicitamente que **CV comum = 0,9993** e **CV por grupos = 0,7967** correspondem à **predição dos clusters**, não à classificação binária.
-- Garantir que computação em névoa seja apresentada como **contexto arquitetural/proposta**, sem atribuir implantação real em gateways ao estudo.
-- Conferir fonte e leitura a 1 metro, de acordo com as normas.
-- O cadastro informado registra apoio **CNPq**; outros financiadores só devem ser exibidos se houver confirmação documental.
+**Estado da publicação:** o autor escolheu a versão definitiva, mas seu **PDF ainda não foi enviado à pasta**. Consulte [`docs/versao-final.md`](../docs/versao-final.md) para instruções e SHA-256 de conferência.
 
-Consulte a lista completa em [`docs/verificacao.md`](../docs/verificacao.md).
+## Versões anteriores (arquivadas para referência)
 
-A execução científica, tabelas e métricas originais pertencem ao [repositório do artigo SBCUP](https://github.com/Math-BUG/iot-fog-ids-two-phase).
+| Arquivo já versionado | Situação |
+| --- | --- |
+| [`painel-em-revisao.pdf`](painel-em-revisao.pdf) | PDF anterior — não é o escolhido para apresentação |
+| [`painel-editavel-revisar.pptx`](painel-editavel-revisar.pptx) | PowerPoint antigo — não corresponde necessariamente ao PDF escolhido |
+| [`visualizacao-painel.png`](visualizacao-painel.png) | Prévia anterior — não usar como representação do arquivo final |
+
+O código, as métricas e as figuras científicas originais estão no [repositório SBCUP](https://github.com/Math-BUG/iot-fog-ids-two-phase).

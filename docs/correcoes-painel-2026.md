@@ -25,3 +25,8 @@ O PDF corrigido foi exportado do mesmo PowerPoint corrigido. A página permanece
 **Apoio financeiro:** por pedido do autor, a arte preserva os logotipos CAPES, FAPEMIG e CNPq. O cadastro do trabalho SIA informa CNPq como apoio financeiro; confirmar a atribuição de CAPES/FAPEMIG antes de declarar a versão final para impressão.
 
 O trabalho permanece registrado como **24615 — Arquitetura híbrida para detecção de tráfego malicioso em ambientes IoT**.
+
+
+## Atualização de 19/10/2026 — PDF final escolhido
+
+O autor enviou uma versão final com apoio **somente CNPq** e QR code para o GitHub. O registro de integridade e a publicação pendente estão documentados em [`versao-final.md`](versao-final.md). Os PDFs/PPTX de revisão continuam no repositório até a inclusão do arquivo final.
