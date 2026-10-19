@@ -1,71 +1,77 @@
 # SIA UFV 2026 — Arquitetura híbrida para detecção de tráfego malicioso em ambientes IoT
 
-Repositório dedicado ao **trabalho 24615**, aprovado na modalidade **Pesquisa (Graduação)** do Simpósio de Integração Acadêmica (SIA) 2026 da Universidade Federal de Viçosa.
+> **Trabalho 24615 · Pesquisa (Graduação) · PIBIC/CNPq · ODS 9**  
+> Materiais de divulgação científica do trabalho aprovado no Simpósio de Integração Acadêmica (SIA) 2026 da Universidade Federal de Viçosa.
 
-## Identificação
+![Arquitetura proposta em duas fases](figuras/arquitetura-duas-fases.png)
 
-| Campo | Informação |
-| --- | --- |
-| Título aprovado | **Arquitetura híbrida para detecção de tráfego malicioso em ambientes IoT** |
-| Autor | Matheus Antony Souza Pereira |
-| Orientador | Vitor Barbosa Carlos de Souza |
-| Instituição | Universidade Federal de Viçosa (UFV), Departamento de Informática |
-| Área temática | ODS 9 — Indústria, Inovação e Infraestrutura |
-| Modalidade | Pesquisa — Graduação |
-| Bolsa | PIBIC/CNPq (2025–2026) |
-| Apresentação | **21/10/2026, 10h30–12h**, Espaço Multiuso, painel **187** |
+## Sobre o trabalho
 
-## Pesquisa apresentada
+Dispositivos de Internet das Coisas (IoT) frequentemente possuem limitações de memória e processamento. A pesquisa investiga o uso de aprendizado de máquina para identificar padrões de tráfego normal e malicioso, considerando a computação em névoa como contexto arquitetural para processamento próximo à rede monitorada.
 
-O trabalho investiga uma abordagem híbrida em **duas fases** para analisar tráfego IoT no contexto de computação em névoa:
+O estudo possui **duas fases**:
 
-1. **Não supervisionada:** descoberta de agrupamentos sem utilizar os rótulos de ataque.
-2. **Supervisionada:** modelos Random Forest para predizer tráfego normal/malicioso (`label`), famílias de ataques (`type`) e agrupamentos (`cluster_kmeans30`).
+1. **Não supervisionada:** agrupamento das conexões sem utilizar os rótulos de ataque no ajuste do modelo; comparação de MiniBatch K-Means, DBSCAN e agrupamento hierárquico.
+2. **Supervisionada:** treinamento de Random Forest para predizer tráfego normal/malicioso (`label`), tipo de ataque (`type`) e os grupos obtidos com K-Means (`cluster_kmeans30`).
 
-O resumo aprovado abrange **211.043 conexões do TON_IoT** (50.000 normais e nove famílias de ataque). A separação de treino, validação e teste preserva grupos identificados pela **chave composta** `src_ip|dst_ip|service|proto`, sem interseção desses grupos entre as partições. O agrupamento principal emprega MiniBatch K-Means com `k=30`.
+A avaliação utilizou **211.043 conexões** do TON_IoT, com **10 classes** (tráfego normal e nove famílias de ataque), e adotou a separação entre treino, validação e teste por grupos definidos pela chave composta `src_ip|dst_ip|service|proto`.
 
-### Resultados do conjunto de teste
+**O trabalho é experimental:** não houve implantação de um IDS em gateway real nem medição de latência fim a fim. Os resultados de generalização em escala maior pertencem a [outra etapa da pesquisa](https://github.com/Math-BUG/ids_generalization_pipeline).
 
-| Medida | Resultado |
+## Resultados selecionados
+
+| Métrica | Conjunto de teste |
 | --- | ---: |
-| AMI entre clusters e `type` | **0,6023** |
-| AMI entre clusters e `label` | **0,3692** |
-| Macro-F1 para `label` | **0,9993** |
-| Macro-F1 para `type` | **0,9525** |
-| Macro-F1 para `cluster_kmeans30` | **0,7648** |
+| AMI dos clusters em relação a `type` | **0,6023** |
+| AMI dos clusters em relação a `label` | **0,3692** |
+| Macro-F1 do Random Forest — `label` | **0,9993** |
+| Macro-F1 do Random Forest — `type` | **0,9525** |
+| Macro-F1 do Random Forest — `cluster_kmeans30` | **0,7648** |
 
-**Efeito da divisão por grupos na predição dos clusters:** a macro-F1 da validação cruzada convencional foi 0,9993, versus **0,7967** na validação por grupos (e **0,7648** no teste por grupos). Essas métricas dizem respeito à tarefa `cluster_kmeans30`, não à classificação binária.
+Na tarefa de **predição de clusters**, a macro-F1 foi **0,9993** na validação cruzada convencional, **0,7967** na validação por grupos e **0,7648** no teste por grupos. Esse contraste mostra a importância de avaliar conexões relacionadas sem permitir a sobreposição da chave de grupo entre as partições.
 
-> **Escopo:** estudo experimental. Não houve implantação nem medição de latência fim a fim de um IDS em gateways reais. Outros experimentos da IC estão em seus próprios repositórios.
-
-## Galeria de resultados
-
-As figuras abaixo foram transferidas **diretamente dos resultados originais do SBCUP**, sem redesenho:
-
-| F1 por família de ataque | Pureza dos clusters |
+| F1 por tipo de ataque | Pureza dos agrupamentos |
 | --- | --- |
-| ![F1 por classe type](figuras/f1-por-classe.png) | ![Pureza dos clusters](figuras/pureza-por-cluster.png) |
+| ![Gráfico F1 por classe](figuras/f1-por-classe.png) | ![Gráfico de pureza dos clusters](figuras/pureza-por-cluster.png) |
 
-A [matriz de confusão completa por tipo de ataque](figuras/matriz-confusao-tipo.png) e as demais tabelas e figuras estão disponíveis, respectivamente, nesta pasta e no [repositório do experimento original](https://github.com/Math-BUG/iot-fog-ids-two-phase).
+Outras figuras: [matriz de confusão por tipo](figuras/matriz-confusao-tipo.png) · [fontes e explicação das imagens](figuras/README.md).
 
-## Materiais
+## Apresentação no SIA 2026
 
-- [Resumo e identificação aprovados pelo SIA](docs/resumo-aprovado.md)
-- [Painel do SIA: versões e instruções](apresentacao/README.md)
-- [Imagens e proveniência](figuras/README.md)
-- [Checklist de revisão científica, visual e financeira](docs/verificacao.md)
+| Informação | Detalhe |
+| --- | --- |
+| **Título aprovado** | **Arquitetura híbrida para detecção de tráfego malicioso em ambientes IoT** |
+| **Primeiro autor** | Matheus Antony Souza Pereira |
+| **Orientador** | Vitor Barbosa Carlos de Souza |
+| **Instituição** | Departamento de Informática — Universidade Federal de Viçosa |
+| **Categoria** | Pesquisa — Graduação |
+| **ODS** | 9 — Indústria, Inovação e Infraestrutura |
+| **Bolsa / apoio registrado** | PIBIC/CNPq |
+| **Sessão programada** | 21/10/2026, 10h30–12h · Espaço Multiuso · Painel 187 |
 
-**Os arquivos binários do painel (PDF, PPTX, prévia PNG) ainda estão pendentes de envio a este repositório.** O documento e os metadados foram organizados antes da publicação da versão final.
+### Materiais disponibilizados
 
-## Repositórios relacionados
+- **[Painel em PDF — versão de revisão](apresentacao/painel-em-revisao.pdf)**
+- **[PowerPoint editável — versão de revisão](apresentacao/painel-editavel-revisar.pptx)**
+- **[Prévia do painel](apresentacao/visualizacao-painel.png)**
+- [Resumo aprovado integralmente](docs/resumo-aprovado.md)
+- [Informações sobre a apresentação e status das versões](apresentacao/README.md)
+- [Cuidados e conferência antes da impressão](docs/verificacao.md)
+- [Como citar o trabalho](docs/como-citar.md)
 
-- [SBCUP 2026 — abordagem em duas fases (código e resultados originais)](https://github.com/Math-BUG/iot-fog-ids-two-phase)
-- [ERAD-SE 2026 — desempenho CPU/GPU](https://github.com/Math-BUG/experimento_erad)
-- [Generalização do IDS](https://github.com/Math-BUG/ids_generalization_pipeline)
+**Atenção:** os arquivos PDF e PPTX disponibilizados são versões de trabalho e **não devem ser presumidos idênticos ou finais para impressão**. O [checklist](docs/verificacao.md) registra ajustes metodológicos e de apresentação ainda necessários.
 
-## Links institucionais
+## Repositórios vinculados
 
-- [Orientações para painel — SIA UFV](https://sia.ufv.br/apresentacao-painel/)
-- [Template oficial SIA 2026](https://docs.google.com/presentation/d/1cVP83E9dWkTBsV7WaBNzIk81OuYaQ1qT2vRx7-e8H_M/edit)
+Este repositório concentra a **divulgação no SIA**, sem duplicar código, dados e experimentos originais.
 
-**Privacidade:** não publicar o relatório final assinado, documentos cadastrais, certificados individuais nem dados brutos de tráfego.
+- **[SBCUP 2026 — abordagem em duas fases](https://github.com/Math-BUG/iot-fog-ids-two-phase):** notebooks, resultados, matrizes e figuras da pesquisa apresentada.
+- **[ERAD-SE 2026 — custo computacional CPU/GPU](https://github.com/Math-BUG/experimento_erad):** experimentos de desempenho e scripts para clusters.
+- **[Generalização de IDS](https://github.com/Math-BUG/ids_generalization_pipeline):** continuidade da IC, avaliações mais rigorosas e experimentos em maior escala.
+
+## Fontes e informações adicionais
+
+- [Orientações oficiais para apresentação em painel no SIA](https://sia.ufv.br/apresentacao-painel/)
+- [Template oficial do SIA 2026](https://docs.google.com/presentation/d/1cVP83E9dWkTBsV7WaBNzIk81OuYaQ1qT2vRx7-e8H_M/edit)
+
+Os arquivos disponibilizados contêm apenas material acadêmico de divulgação. O relatório final assinado, os documentos administrativos e os dados brutos de tráfego **não** fazem parte deste repositório. A disponibilização pública não implica concessão de licença irrestrita para redistribuição ou adaptação de materiais de terceiros.

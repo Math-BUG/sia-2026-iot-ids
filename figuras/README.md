@@ -1,15 +1,14 @@
-# Figuras de apoio ao painel SIA 2026
+# Figuras e proveniência
 
-As figuras abaixo são cópias **originais do repositório SBCUP**, transferidas sem reconstrução e mantendo os mesmos bytes/identidades de conteúdo:
+A finalidade desta pasta é apoiar a **divulgação no SIA 2026**. O repositório [SBCUP 2026](https://github.com/Math-BUG/iot-fog-ids-two-phase) continua sendo a fonte principal dos notebooks, resultados e gráficos originais.
 
-| Arquivo neste repositório | Origem | Conteúdo |
+| Imagem | Origem | Observação |
 | --- | --- | --- |
-| [`f1-por-classe.png`](f1-por-classe.png) | [`f1_por_classe_type.png`](https://github.com/Math-BUG/iot-fog-ids-two-phase/blob/main/gr%C3%A1ficos/pipeline/f1_por_classe_type.png) | F1 da classificação por tipo de ataque |
-| [`matriz-confusao-tipo.png`](matriz-confusao-tipo.png) | [`matriz_confusao_type.png`](https://github.com/Math-BUG/iot-fog-ids-two-phase/blob/main/gr%C3%A1ficos/pipeline/matriz_confusao_type.png) | Matriz de confusão para `type` |
-| [`pureza-por-cluster.png`](pureza-por-cluster.png) | [`kmeans30_pureza_por_cluster.png`](https://github.com/Math-BUG/iot-fog-ids-two-phase/blob/main/gr%C3%A1ficos/pipeline/kmeans30_pureza_por_cluster.png) | Pureza dos clusters |
+| [`arquitetura-duas-fases.png`](arquitetura-duas-fases.png) | Diagrama apresentado no artigo SBCUP 2026 | Arquitetura conceitual, sem comprovação de implantação operacional |
+| [`f1-por-classe.png`](f1-por-classe.png) | [F1 da tarefa `type`](https://github.com/Math-BUG/iot-fog-ids-two-phase/blob/main/gr%C3%A1ficos/pipeline/f1_por_classe_type.png) | Figura original, sem redesenho |
+| [`matriz-confusao-tipo.png`](matriz-confusao-tipo.png) | [Matriz de confusão `type`](https://github.com/Math-BUG/iot-fog-ids-two-phase/blob/main/gr%C3%A1ficos/pipeline/matriz_confusao_type.png) | Figura original, sem redesenho |
+| [`pureza-por-cluster.png`](pureza-por-cluster.png) | [Pureza do K-Means](https://github.com/Math-BUG/iot-fog-ids-two-phase/blob/main/gr%C3%A1ficos/pipeline/kmeans30_pureza_por_cluster.png) | Figura original, sem redesenho |
 
-A figura **arquitetura-duas-fases.png** está disponível no pacote de arquivos preparado anteriormente, mas **ainda não foi enviada ao GitHub**.
+As três figuras métricas foram copiadas do repositório de origem preservando os bytes, enquanto o diagrama da arquitetura foi recuperado dos materiais da publicação.
 
-A fonte científica principal é o artigo do SBCUP 2026; notebooks, CSVs, resultados e demais figuras ficam no [repositório do experimento](https://github.com/Math-BUG/iot-fog-ids-two-phase).
-
-Os gráficos não demonstram implantação operacional de um IDS em gateway, nem devem ser confundidos com experimentos posteriores de generalização.
+Os gráficos correspondem ao **recorte inicial com 211.043 conexões TON_IoT**, não aos experimentos posteriores com a população completa. São resultados de pesquisa, não indicadores de desempenho de um IDS implantado na rede.
