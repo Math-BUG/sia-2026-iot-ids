@@ -38,6 +38,16 @@ O resumo aprovado abrange **211.043 conexões do TON_IoT** (50.000 normais e nov
 
 > **Escopo:** estudo experimental. Não houve implantação nem medição de latência fim a fim de um IDS em gateways reais. Outros experimentos da IC estão em seus próprios repositórios.
 
+## Galeria de resultados
+
+As figuras abaixo foram transferidas **diretamente dos resultados originais do SBCUP**, sem redesenho:
+
+| F1 por família de ataque | Pureza dos clusters |
+| --- | --- |
+| ![F1 por classe type](figuras/f1-por-classe.png) | ![Pureza dos clusters](figuras/pureza-por-cluster.png) |
+
+A [matriz de confusão completa por tipo de ataque](figuras/matriz-confusao-tipo.png) e as demais tabelas e figuras estão disponíveis, respectivamente, nesta pasta e no [repositório do experimento original](https://github.com/Math-BUG/iot-fog-ids-two-phase).
+
 ## Materiais
 
 - [Resumo e identificação aprovados pelo SIA](docs/resumo-aprovado.md)
