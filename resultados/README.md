@@ -1,6 +1,6 @@
 # Resultados experimentais
 
-Este documento detalha os resultados associados ao trabalho **“Arquitetura híbrida para detecção de tráfego malicioso em ambientes IoT”**, apresentado no SIA UFV 2026. Os valores e as imagens vêm dos experimentos da abordagem em duas fases documentada no [repositório do SBCUP](https://github.com/Math-BUG/iot-fog-ids-two-phase).
+Este documento detalha os resultados associados ao trabalho **“Arquitetura híbrida para detecção de tráfego malicioso em ambientes IoT”**, aprovado para apresentação no SIA UFV 2026. Os valores e as imagens vêm dos experimentos da abordagem em duas fases documentada no [repositório do SBCUP](https://github.com/Math-BUG/iot-fog-ids-two-phase).
 
 ## Base de dados e avaliação
 
