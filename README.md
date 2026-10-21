@@ -6,7 +6,7 @@
 Departamento de Informática · Universidade Federal de Viçosa (UFV)  
 Pesquisa · Graduação · ODS 9 · Bolsa PIBIC/CNPq
 
-**[Painel apresentado no SIA — PDF](apresentacao/painel-final-sia-2026.pdf)** · [Resumo aprovado](docs/resumo-aprovado.md) · **[Resultados detalhados](resultados/README.md)**
+**[Painel do SIA — PDF](apresentacao/painel-final-sia-2026.pdf)** · [Resumo aprovado](docs/resumo-aprovado.md) · **[Resultados detalhados](resultados/README.md)**
 
 ## Pesquisa
 
